@@ -25,7 +25,7 @@ jobs:
       - name: Copy tools_agents_build module
         run: |
           mkdir -p /home/runner/work/ACTIONTEST/ACTIONTEST/src/tools_agents_build
-          cp -r tools_agents_build/* /home/runner/work/ACTIONTEST/ACTIONTEST/src/tools_agents_build/
+          cp -r ./tools_agents_build /home/runner/work/ACTIONTEST/ACTIONTEST/src/tools_agents_build/
 
       - name: Lint with Ruff
         run: |
