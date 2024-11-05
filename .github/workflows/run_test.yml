@@ -22,11 +22,17 @@ jobs:
             pip install -r requirements.txt
         fi
     
+    - name: Create tools_agents_build directory
+      run: |
+        if [ ! -d "./src/tools_agents_build" ]; then
+         mkdir -p ./src/tools_agents_build
+        fi
+
     - name: Copy tools_agents_build module
       run: |
-         mkdir -p ./src/tools_agents_build
-         cp -r ./src/tools_agents_build/* /home/runner/work/ACTIONTEST/ACTIONTEST/src/tools_agents_build/
-    - name: Lint with Ruff
+        cp -r ./src/tools_agents_build/* /home/runner/work/ACTIONTEST/ACTIONTEST/src/tools_agents_build/
+    
+       - name: Lint with Ruff
       run: |
         pip install ruff
         ruff --format=github --target-version=py310 .
