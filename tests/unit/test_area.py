@@ -1,9 +1,9 @@
 from langchain.schema import HumanMessage
 import pytest
-from src.tools_agents_build import graph
+from tools_agents_build import graph
 # Cas de test prédéfinis
 test_cases = [
-    {"input": "definition of machine learning", "expected": "WebScraper"},
+    {"input": "definition of machine learning", "expected": "Researcher"},
     {"input": "scrape this page: https://medium.com/data-science-at-microsoft/how-large-language-models-work-91c362f5b78f", "expected": "WebScraper"},
 ]
 
