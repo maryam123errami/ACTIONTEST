@@ -3,3 +3,4 @@ pytest-cov==4.0.0
 ruff==v0.0.260
 coverage-badge~=1.1.0
 langchain==0.3.4
+langfuse
